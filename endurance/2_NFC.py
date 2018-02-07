@@ -35,8 +35,8 @@ class BtEndurance(unittest.TestCase):
         self.mod.logger.info("battery status: %s" % self.mod.adb.shell("dumpsys battery"))
 
     def tearDown(self):
-        self.mod.back_to_home()
-        self.mod.logger.info("battery status: %s" % self.mod.adb.shell("dumpsys battery"))
+        #self.mod.back_to_home()
+        #self.mod.logger.info("battery status: %s" % self.mod.adb.shell("dumpsys battery"))
 
     def testEndurance(self):
         self.case_set_nfc(int(self.mod.dicttesttimes.get("nfc_in_set".lower())))
